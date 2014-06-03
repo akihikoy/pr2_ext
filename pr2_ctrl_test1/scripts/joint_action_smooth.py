@@ -74,14 +74,14 @@ def InterpolateLinearly2(traj_points,p1,p2,duration,time_step,rot_adjust=False, 
     p= p1+v*t
     jp.time_from_start= rospy.Duration(t)
     jp.positions= p.copy()
-    jp.velocities= v.copy()
+    #jp.velocities= v.copy()
     traj_points.append(copy.deepcopy(jp))
     t+= time_step
   if t-time_step<=duration:
     p= p1+v*duration
     jp.time_from_start= rospy.Duration(duration)
     jp.positions= p.copy()
-    jp.velocities= v.copy()
+    #jp.velocities= v.copy()
     traj_points.append(copy.deepcopy(jp))
   return duration
 
@@ -159,7 +159,7 @@ class Test:
       traj_duration= dt
       t= t+dt
       g= np.array([self.Curve(t)]*7)
-      g[4]= AngleMod1(40.0*(g[4]))
+      #g[4]= AngleMod1(40.0*(g[4]))
       dg= np.array([self.CurveD(t)]*7)
       #InterpolateLinearly1(goal.trajectory.points, self.joint_positions[1],self.joint_velocities[1], g,dg, dt, self.num_points)
       if False:
