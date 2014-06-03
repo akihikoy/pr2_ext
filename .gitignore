@@ -10,6 +10,8 @@
 *.kate-swp
 core*
 
+*.dat
+
 *.old
 old-*
 tmp*

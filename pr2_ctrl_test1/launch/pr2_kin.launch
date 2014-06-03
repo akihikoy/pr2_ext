@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="planning_environment" type="environment_server" name="environment_server" />
+  <include file="$(find pr2_arm_navigation_kinematics)/launch/right_arm_collision_free_ik.launch" />
+  <include file="$(find pr2_arm_navigation_kinematics)/launch/left_arm_collision_free_ik.launch" />
+</launch>
